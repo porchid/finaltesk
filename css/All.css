@@ -493,6 +493,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 0 80px;
 }
 .newsletter-white{
   background-color: white;
@@ -533,9 +534,6 @@ body {
   }
   .newsletter-white h2{
     font-size: 48px;
-  }
-  .newsletter-white{
-    /* padding: 40px 24px; */
   }
 }
 /* 與我聯繫 */
