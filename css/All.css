@@ -1,0 +1,516 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+  /* 確保元素的總尺寸不會超出設定值。 */
+    outline: solid 1px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  /* 繼承父元素顏色 */
+}
+
+img {
+    vertical-align: middle;
+    /* 行內垂直置中*/
+    width: 100%;
+    height: auto;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #fbfbfb;
+  margin: 0 auto;
+}
+
+.bi {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* utils */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.h2 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #0027d5;
+}
+
+.text-gray {
+  color: #4b4b4b;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.break-line {
+  display: none;
+}
+
+.ellipsis-mutiple {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .h2 {
+    font-size: 48px;
+  }
+  .container {
+    max-width: 768px;
+  }
+  .break-line {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+/* components */
+.icon-social{
+    display: flex;
+}
+.icon-social .bi{
+    color: #0027D5;
+    padding: 12px 16px;
+}
+.icon-social .bi:hover{
+    border: 2px solid rgb(201, 38, 241);
+}
+.btn {
+  padding: 8px 16px;
+  border: solid 1px #000;
+  border-radius: 80px;
+  color: #4b4b4b;
+}
+
+.btn:hover {
+  background: #000;
+  color: white;
+}
+
+.btn-primary {
+  border: solid 1px #0027d5;
+  color: #0027d5;
+  background: white;
+}
+
+.btn-primary:hover {
+  background-color: #0027d5;
+  color: white;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 80px;
+  font-weight: 700;
+  background: #0027d5;
+  color: white;
+}
+
+.card .card-head {
+  margin-bottom: 16px;
+}
+
+.card time {
+  margin-bottom: 4px;
+}
+
+.card .hashtag {
+  font-size: 24px;
+  color: #0027d5;
+}
+
+.card .hashtag a {
+  margin-right: 8px;
+}
+
+.card .card-title {
+  margin-bottom: 8px;
+}
+
+.card .card-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .card-desc {
+  margin-bottom: 16px;
+}
+
+/* page - index */
+.header ul{
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    gap: 40px;
+}
+.nav-item{
+    font-size: 28px;
+    font-weight: 700;
+    /* color: #000000; */
+}
+
+.banner-profile {
+  display: flex;
+}
+.banner-photo,.banner-intro {
+  width: 50%;
+}
+.banner-intro {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner-intro .banner-title {
+  font-size: 120px;
+}
+.banner-intro .banner-subtitle {
+  font-size: 28px;
+}
+.banner-desc {
+  font-size: 28px;
+  background-color: white;
+  width: 56%;
+  padding: 80px 40px;
+  margin-right: 80px;
+  margin-left: auto;
+  /* 相對定位 */
+  position: relative;
+  margin-bottom: -160px;
+  right: 0;
+  bottom: 160px;
+}
+
+.banner-desc p{
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1710px) {
+  .banner-intro .banner-title {
+    font-size: calc(((100vw / 2) - 160px) / 6);
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-profile {
+    flex-direction: column;
+  }
+
+  .banner-photo, .banner-intro {
+    width: 100%;
+  }
+
+  .banner-photo img {
+    height: 375px;
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .banner-intro {
+    padding: 24px 24px 200px;
+  }
+
+  .banner-intro .banner-title {
+    font-size: 52px;
+  }
+
+  .banner-desc {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.service {
+  padding: 80px 0;
+}
+
+.service .list {
+  padding: 0 110px;
+}
+
+.service .list-item {
+  display: flex;
+  align-items: center;
+}
+
+.service .list-item:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.service .list-img {
+  width: 59.1%;
+}
+
+.list-item-row .list-img {
+  margin-right: -40px;
+}
+
+.list-item-reverse {
+  flex-direction: row-reverse;
+}
+
+.list-item-reverse .list-img {
+  margin-left: -40px;
+}
+
+.service .list-text {
+  position: relative;
+  z-index: 1;
+  width: calc(40.9% + 40px);
+  padding: 24px;
+  background: white;
+}
+
+.service .list-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 992px) {
+  .service .list {
+    padding: 0;
+  }
+
+  .service .list-img,
+  .service .list-text {
+    width: 100%;
+  }
+
+  .list-item-row {
+    flex-direction: column;
+  }
+
+  .list-item-row .list-img {
+    margin-right: 0;
+  }
+
+  .list-item-reverse {
+    flex-direction: column;
+  }
+
+  .list-item-reverse .list-img {
+    margin-left: 0;
+  }
+}
+
+.case-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.case-img {
+  width: 57.48%;
+  padding: 24px;
+  background: #ededed;
+}
+
+.case-desc {
+  width: 42.4%;
+}
+
+.case-desc-top {
+  width: calc(100% - 24px);
+  margin-left: -219px;
+  margin-right: 219px;
+  background: white;
+}
+
+.case-desc-bottom {
+  background: #f5f5f5;
+  margin-top: -40px;
+  margin-left: 24px;
+  flex-grow: 1;
+}
+
+.case-desc-top,
+.case-desc-bottom {
+  padding: 80px 40px;
+}
+
+.case-desc-top .bi,
+.case-desc-bottom .bi {
+  margin-bottom: 24px;
+}
+
+.case-desc-bottom p {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1200px) {
+  .case-desc-top,
+  .case-desc-bottom {
+    padding: 80px 24px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .case-wrapper {
+    flex-direction: column;
+  }
+
+  .case-img {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .case-desc {
+    width: 100%;
+  }
+
+  .case-desc-top {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .case-desc-bottom {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .case-desc-top,
+  .case-desc-bottom {
+    padding: 40px 24px;
+  }
+}
+
+.feature {
+  padding: 80px 0;
+}
+
+.feature-wrapper {
+  position: relative;
+}
+
+.feature .swiper {
+  overflow: hidden;
+}
+
+.feature .swiper-wrapper {
+  overflow: visible;
+}
+
+.feature .slider-btn {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0027d5;
+}
+
+.feature .slider-btn-prev {
+  left: -64px;
+}
+
+.feature .slider-btn-next {
+  right: -64px;
+}
+
+.feature .swiper-button-disabled {
+  color: #b2bef2;
+}
+
+@media (max-width: 1500px) {
+  .feature .slider-btn {
+    position: static;
+    transform: translateY(0);
+  }
+  .feature .slider-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+  .feature .swiper {
+    margin-bottom: 32px;
+  }
+}
