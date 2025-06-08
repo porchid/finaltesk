@@ -13,21 +13,26 @@
 <body>
   <nav class="header">
     <ul class="nav">
-      <li><a href="#" class="nav-item">首頁</a></li>
-      <li><a href="#" class="nav-item">部落格</a></li>
+      <li><a href="#" class="nav-item h3 fw-bold">首頁</a></li>
+      <li><a href="#" class="nav-item h3 fw-bold">部落格</a></li>
     </ul>
   </nav>
   
   <section class="banner">
     <div class="banner-profile">
-      <div class="banner-photo"><img src="img/Hero Section.png" alt="banner" /></div>
+      <div class="banner-photo">
+        <picture>
+          <source srcset="img\Hero Section-mobile.png" media="(max-width: 992px)">
+          <img src="img/Hero Section.png" alt="banner">
+        </picture>
+      </div>
       <div class="banner-intro">
-        <h1 class="banner-title fw-black text-primary">Alyse Wang</h1>
-        <h2 class="banner-subtitle">前端工程師 & 職涯諮詢師</h2>
+        <h1 class="banner-title h1 text-primary">Alyse Wang</h1>
+        <h3 class="banner-subtitle h3 text-primary">前端工程師 & 職涯諮詢師</h3>
       </div>
     </div>
     <div class="banner-desc">
-      <p>嗨，我是 Alyse 一名深耕前端技術的工程師。</p>
+      <p>嗨，我是Alyse <span class="textblock">一名深耕前端技術的工程師。</span></p>
       <p>擅長 React、Vue等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！</p>
       <ul class="icon-social">
         <li><a href="#" target="_blank"><i class="bi bi-youtube text-primary" style="font-size: 40px"></i></a></li>

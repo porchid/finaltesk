@@ -91,6 +91,10 @@ body {
   margin: 0 auto;
   padding: 0 12px;
 }
+.h1{
+  font-size: 120px;
+  font-weight: 900;
+}
 .h2 {
   font-size: 64px;
   font-weight: 700;
@@ -116,6 +120,9 @@ body {
 }
 
 @media (max-width: 992px) {
+  .h1{
+    font-size: 52px;
+  }
   .h2 {
     font-size: 48px;
   }
@@ -137,6 +144,7 @@ body {
 /* 社群按鈕 */
 .icon-social{
     display: flex;
+    justify-content: flex-start;
 }
 .icon-social .bi{
     padding: 12px 16px;
@@ -181,10 +189,6 @@ body {
     padding: 24px 0;
     gap: 40px;
 }
-.nav-item{
-    font-size: 28px;
-    font-weight: 700;
-}
 .banner-profile {
   display: flex;
 }
@@ -200,12 +204,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.banner-intro .banner-title {
-  font-size: 120px;
-}
-.banner-intro .banner-subtitle {
-  font-size: 28px;
 }
 .banner-desc {
   font-size: 28px;
@@ -225,12 +223,6 @@ body {
   margin-bottom: 16px;
 }
 
-@media (max-width: 1710px) {
-  .banner-intro .banner-title {
-    font-size: calc(((100vw / 2) - 160px) / 6);
-  }
-}
-
 @media (max-width: 992px) {
   .banner-profile {
     flex-direction: column;
@@ -246,18 +238,21 @@ body {
   .banner-intro {
     padding: 24px 24px 200px;
   }
-  .banner-intro .banner-title {
-    font-size: 52px;
-  }
   .banner-desc {
     width: calc(100% - 24px);
     margin-left: auto;
     margin-right: auto;
   }
+  .textblock{
+    display: block;
+  }
 }
 /* 專業服務介紹 */
 .service {
   padding: 80px 0;
+}
+.service-title{
+  margin-bottom: 32px;
 }
 .service .list {
   padding: 0 110px;
@@ -316,6 +311,10 @@ body {
   }
   .list-item-reverse .list-img {
     margin-left: 0;
+  }
+  .service-contact{
+    display: block;
+    text-align: right;
   }
 }
 /* 輪播區 */
