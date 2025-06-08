@@ -238,6 +238,9 @@ body {
   .banner-intro {
     padding: 24px 24px 200px;
   }
+  .bammer-intro .banner-title {
+    margin-bottom: 12px;
+  }
   .banner-desc {
     width: calc(100% - 24px);
     margin-left: auto;
@@ -500,8 +503,6 @@ body {
   margin: 152px 80px;
 }
 .newsletter-white h2{
-  font-size: 64px;
-  font-weight: 700;
   margin-bottom: 16px;
 }
 .newsletter-white p{
@@ -531,9 +532,10 @@ body {
     width: 100%;
     padding: 12px;
   }
-  .newsletter-white h2{
-    font-size: 48px;
-  }
+  .newsletter-white{
+    padding: 12px;
+    margin: 0;
+}
 }
 /* 與我聯繫 */
 .icon{
