@@ -193,7 +193,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+  background-image: url("../img/Hero Section2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -492,11 +492,11 @@ body {
   width: 50%;
 }
 .newsletter{
-  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true);
+  background-image: url("../img/Hero Section2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0 80px;
+  /* padding: 0 80px; */
 }
 .newsletter-white{
   background-color: white;
