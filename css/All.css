@@ -501,7 +501,7 @@ body {
 .newsletter-white{
   background-color: white;
   padding: 80px;
-  margin: 152px 80px;
+  /* margin: 152px auto; */
 }
 .newsletter-white h2{
   margin-bottom: 16px;
@@ -524,8 +524,7 @@ body {
   display: block;
   width: 100%;
 }
-
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .sub-container{
     flex-direction: column;
   }
@@ -537,6 +536,19 @@ body {
     padding: 12px;
     margin: 0;
 }
+}
+@media (max-width: 767px) {
+  .sub-container{
+    flex-direction: column;
+  }
+  .sub-photo, .newsletter{
+    width: 100%;
+    padding: 12px;
+  }
+  .newsletter-white{
+    padding: 12px;
+    margin: 0;
+  }
 }
 /* 與我聯繫 */
 .icon{
